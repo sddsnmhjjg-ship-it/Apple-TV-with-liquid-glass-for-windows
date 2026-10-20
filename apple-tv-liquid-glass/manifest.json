@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Apple TV Liquid Glass",
+  "version": "2.0.0",
+  "description": "Real-time Snell's law optical refraction and Liquid Glass surfaces for tv.apple.com.",
+  "content_scripts": [
+    {
+      "matches": ["https://tv.apple.com/*"],
+      "js": ["liquid-glass.js"],
+      "run_at": "document_start"
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+/* ==========================================================================
+   Liquid Glass System — Companion Stylesheet
+   Pure Optical Glass Aesthetic with Zero Emojis
+   ========================================================================== */
+
+:root {
+  --lg-blur-default: 24px;
+  --lg-saturate-default: 175%;
+  --lg-tint-dark: rgba(18, 22, 32, 0.40);
+  --lg-tint-light: rgba(255, 255, 255, 0.08);
+  --lg-border-subtle: rgba(255, 255, 255, 0.16);
+  --lg-border-specular: rgba(255, 255, 255, 0.28);
+  --lg-shadow-ambient: 0 16px 40px rgba(0, 0, 0, 0.50);
+  --lg-shadow-specular: 0 4px 14px rgba(10, 132, 255, 0.40);
+  --lg-accent-blue: #0a84ff;
+  --lg-accent-blue-hover: #2090ff;
+  --lg-font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+}
+
+/* Base Glass Container */
+.lg-glass {
+  position: relative;
+  isolation: isolate;
+  background: var(--lg-tint-dark);
+  backdrop-filter: blur(var(--lg-blur-default)) saturate(var(--lg-saturate-default));
+  -webkit-backdrop-filter: blur(var(--lg-blur-default)) saturate(var(--lg-saturate-default));
+  border: 1px solid var(--lg-border-subtle);
+  border-radius: 16px;
+  box-shadow: var(--lg-shadow-ambient);
+  color: #ffffff;
+  font-family: var(--lg-font-sans);
+  text-shadow: none !important;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Glass Panel / Window */
+.lg-glass-panel {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.02) 50%, rgba(8, 12, 20, 0.45) 100%);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border: 1px solid var(--lg-border-specular);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+/* Glass Card */
+.lg-glass-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.02) 50%, rgba(10, 14, 24, 0.40) 100%);
+  backdrop-filter: blur(22px) saturate(165%);
+  -webkit-backdrop-filter: blur(22px) saturate(165%);
+  border: 1px solid var(--lg-border-subtle);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
+}
+.lg-glass-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--lg-border-specular);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.30);
+}
+
+/* Glass Interactive Button */
+.lg-glass-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--lg-tint-light);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  border: 1px solid var(--lg-border-subtle);
+  border-radius: 12px;
+  color: rgba(255, 255, 255, 0.90);
+  font-family: var(--lg-font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 16px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: none;
+  transition: background 0.18s ease, border-color 0.18s ease, transform 0.12s ease;
+}
+.lg-glass-btn:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: var(--lg-border-specular);
+  color: #ffffff;
+}
+.lg-glass-btn:active {
+  transform: scale(0.97);
+}
+
+/* Glass Button - Active / Selected State (macOS Blue) */
+.lg-glass-btn.active,
+.lg-glass-btn-primary {
+  background: var(--lg-accent-blue) !important;
+  border-color: rgba(255, 255, 255, 0.30) !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  box-shadow: var(--lg-shadow-specular) !important;
+}
+.lg-glass-btn.active:hover,
+.lg-glass-btn-primary:hover {
+  background: var(--lg-accent-blue-hover) !important;
+}
+
+/* Glass Pill / Capsule */
+.lg-glass-pill {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid var(--lg-border-subtle);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+/* Glass Slider Track & Thumb */
+.lg-glass-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+.lg-glass-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1.5px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  transition: transform 0.12s ease;
+}
+.lg-glass-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}

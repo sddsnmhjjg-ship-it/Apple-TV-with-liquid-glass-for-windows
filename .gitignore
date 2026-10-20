@@ -1,0 +1,19 @@
+# Temporary & Backup files
+*.old
+*.bak
+*.tmp
+*.log
+
+# Python cache & scratch
+__pycache__/
+*.pyc
+scratch/
+
+# Build artifacts & user data
+bin/
+obj/
+*.suo
+*.user
+.vs/
+UserProfile/
+Extension/

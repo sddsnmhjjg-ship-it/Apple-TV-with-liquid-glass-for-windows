@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" class="atv-lg-on">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apple TV — Liquid Glass Optical Engine</title>
+  <link rel="icon" type="image/png" href="apple-tv-logo.png" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      background: #05060a;
+      color: #ffffff;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI Variable Display", "Segoe UI", sans-serif;
+      overflow-x: hidden;
+    }
+
+    .app-container {
+      display: grid;
+      min-height: 100vh;
+    }
+
+    .scrollable-page {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      overflow-y: auto;
+      background:
+        radial-gradient(900px 520px at 78% 22%, rgba(16, 118, 225, 0.42), transparent 70%),
+        radial-gradient(800px 500px at 22% 68%, rgba(235, 165, 35, 0.34), transparent 72%),
+        linear-gradient(180deg, #0b1324 0%, #070a12 55%, #05060a 100%);
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 22px;
+      height: 52px;
+    }
+
+    .header__contents {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand-lockup {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .brand-lockup svg {
+      width: 22px;
+      height: 22px;
+      fill: currentColor;
+    }
+
+    .brand-lockup img {
+      width: 24px;
+      height: 24px;
+      border-radius: 6px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .navigation-tabs {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .navigation-tabs a {
+      color: rgba(255, 255, 255, 0.88);
+      text-decoration: none;
+    }
+
+    .header__controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .search-input {
+      display: inline-flex;
+      align-items: center;
+      padding: 5px 14px;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .commerce-button {
+      padding: 6px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .hero-stage {
+      position: relative;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 130px 42px 80px;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .hero-copy h1 {
+      font-size: clamp(34px, 4.4vw, 56px);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+      margin-bottom: 16px;
+    }
+
+    .hero-copy p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.82);
+      margin-bottom: 26px;
+      max-width: 580px;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    button.theme-primary,
+    button.theme-outline {
+      padding: 12px 24px;
+      font-size: 14.5px;
+      font-weight: 700;
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+    }
+
+    button.theme-primary {
+      background: #ffffff;
+      color: #000000 !important;
+    }
+
+    .optics-card {
+      padding: 28px 30px;
+    }
+
+    .optics-card h2 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .optics-card ul {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      font-size: 13.5px;
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.84);
+    }
+
+    @media (max-width: 900px) {
+      .hero-stage {
+        grid-template-columns: 1fr;
+        padding: 100px 22px 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="body-container">
+    <div class="app-container">
+      <div data-testid="header" class="header header--color">
+        <div class="header__contents">
+          <div class="header__open">
+            <a class="brand-lockup" href="https://tv.apple.com/us/apple-tv">
+              <img src="apple-tv-logo.png" alt="Apple TV Logo" />
+              <span>Apple TV</span>
+            </a>
+          </div>
+
+          <div class="header__tabs">
+            <nav class="navigation-tabs">
+              <ul>
+                <li><a href="https://tv.apple.com/us/apple-tv" class="navigation-tabs__link active">Apple TV</a></li>
+                <li><a href="https://tv.apple.com/us/channel/formula-1/tvs.sbd.241000" class="navigation-tabs__link">Formula 1</a></li>
+                <li><a href="https://tv.apple.com/us/channel/mls/tvs.sbd.7000" class="navigation-tabs__link">MLS</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="header__controls">
+            <div class="search-input">Search</div>
+            <div class="account-menu">
+              <button class="contextual-menu__trigger" aria-label="User Profile" title="User Profile">
+                <svg viewBox="0 0 64 64" width="20" height="20" fill="currentColor">
+                  <path d="M32 31.8c6.6 0 11.8-5.2 11.8-11.8S38.6 8.2 32 8.2 20.2 13.4 20.2 20 25.4 31.8 32 31.8zm0 5.4c-9.8 0-21.2 4.8-21.2 14.2v3.4h42.4v-3.4c0-9.4-11.4-14.2-21.2-14.2z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scrollable-page">
+        <section class="hero-stage">
+          <div class="hero-copy">
+            <h1>Native Apple TV with Real Liquid Glass Refraction</h1>
+            <p>
+              Launch <strong>Apple-TV-LiquidGlass.exe</strong> to run the official Apple TV application (<code>tv.apple.com</code>) with genuine Apple Account sign-in, two-factor authentication, Widevine DRM streaming, and real-time Snell's-law optical glass refraction injected directly into Apple's live interface.
+            </p>
+            <div class="cta-row">
+              <button class="theme-primary" onclick="location.href='https://tv.apple.com/us/apple-tv'">Open Live Apple TV</button>
+              <button class="theme-outline" onclick="(window.__atvOpenSettings && window.__atvOpenSettings()) || document.getElementById('atv-lg-modal-backdrop')?.classList.remove('atv-lg-closed')">Open Account &amp; Liquid Glass Settings</button>
+            </div>
+          </div>
+
+          <div class="sticky-cta optics-card">
+            <h2>Optical Pipeline Specification</h2>
+            <ul>
+              <li><strong>Signed Distance Field (SDF):</strong> Computes exact perimeter distance and 2D outward surface normals per element.</li>
+              <li><strong>Snell's Law Lens Profile:</strong> Convex squircle bezel (n = 1.52) bends background rays toward the lens interior.</li>
+              <li><strong>Chromatic Dispersion:</strong> Separate R, G, and B SVG displacement passes create subtle optical color fringing at curved edges.</li>
+              <li><strong>Real Apple Account &amp; DRM:</strong> Runs inside Apple's live web client with persistent credentials and Widevine hardware decryption.</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <script>window.__ATV_LG_FORCE = true;</script>
+  <script src="apple-tv-liquid-glass/liquid-glass.js"></script>
+</body>
+</html>
