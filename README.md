@@ -1,14 +1,14 @@
 <div align="center">
 
-<img src="apple-tv-logo.png" alt="Apple TV Liquid Glass Logo" width="120" style="border-radius: 26px;" />
+<img src="apple-tv-logo-orig.png" alt="Apple TV Liquid Glass Logo" width="120" style="border-radius: 26px;" />
 
 # Apple TV with Liquid Glass for Windows
 
 **Cinematic streaming brought to life in real liquid glass.**  
 A lightweight, portable Apple TV desktop client for Windows 10 & 11 featuring realistic 3D liquid glass effects, rainbow light reflections, and 4K Ultra HD playback.
 
-[![Platform](https://img.shields.io/badge/Platform-Windows%2010%20%2F%2011%20(64--bit)-0078D6?logo=windows&logoColor=white)](https://github.com/sddsnmhjjg-ship-it/Apple-TV-with-liquid-glass-for-windows/releases)
-[![App Size](https://img.shields.io/badge/App%20Size-141%20KB%20(Standalone)-30D158?logo=speedtest&logoColor=white)](https://github.com/sddsnmhjjg-ship-it/Apple-TV-with-liquid-glass-for-windows/releases)
+[![Platform](https://img.shields.io/badge/Platform-Windows%2010%20%2F%2011%20(64--bit)-0078D6?logo=windows&logoColor=white)](https://github.com/sddsnmhjjg-ship-it/Apple-TV-with-liquid-glass-for-windows)
+[![App Size](https://img.shields.io/badge/App%20Size-152%20KB%20(Standalone)-30D158?logo=speedtest&logoColor=white)](https://github.com/sddsnmhjjg-ship-it/Apple-TV-with-liquid-glass-for-windows)
 [![Streaming](https://img.shields.io/badge/Streaming-4K%20Ultra%20HD%20%26%20HDR-0071E3?logo=apple-tv&logoColor=white)](https://tv.apple.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-ssnmjjg-FFDD00?logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/ssnmjjg)
@@ -19,31 +19,21 @@ A lightweight, portable Apple TV desktop client for Windows 10 & 11 featuring re
 
 ## Overview
 
-Most web wrappers and apps simply use a flat, dark grey box. **Apple TV with Liquid Glass** upgrades your streaming experience with:
+**Apple TV with Liquid Glass** brings a native, glass-inspired viewing experience to Windows users:
 
 - **Realistic 3D Liquid Glass:** Light naturally bends around curved glass edges, giving menus and panels the look of real physical glass.
 - **Rainbow Color Glints:** Subtle prism highlights along glass borders that shimmer as content moves underneath.
-- **Full 4K Ultra HD & HDR Support:** Hardware-accelerated video decoding ensures buttery-smooth 4K playback on compatible screens.
-- **Ultra-lightweight Standalone App (~141 KB):** No heavy Electron bundles. No installer. Just download the `.exe` and run.
+- **Full 4K Ultra HD & HDR Support:** Hardware-accelerated video decoding ensures silky-smooth 4K playback on compatible screens.
+- **Ultra-lightweight Standalone App (~152 KB):** No heavy Electron bundles. No installer. Just download `Apple-TV-LiquidGlass.exe` and run.
 - **Keeps You Signed In:** Securely saves your login session inside your personal Windows AppData folder (`%LocalAppData%\AppleTV_LiquidGlass`).
 
 ---
 
-## Preview
+## Quick Start
 
-<div align="center">
-  <img src="Example.png" alt="Apple TV Liquid Glass Showcase" width="85%" style="border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.15);" />
-  <br /><br />
-  <img src="Example2.png" alt="Liquid Glass Interface In Action" width="85%" style="border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.15);" />
-</div>
-
----
-
-## Quick Start (No Setup Required)
-
-1. Head over to the **[GitHub Releases](https://github.com/sddsnmhjjg-ship-it/Apple-TV-with-liquid-glass-for-windows/releases)** page.
-2. Download **`Apple-TV-LiquidGlass.exe`**.
-3. Double-click to launch!
+1. Download **`Apple-TV-LiquidGlass.exe`** directly from this repository or the [Releases](https://github.com/sddsnmhjjg-ship-it/Apple-TV-with-liquid-glass-for-windows/releases) section.
+2. Double-click **`Apple-TV-LiquidGlass.exe`** to launch.
+3. Sign in to your Apple TV account and enjoy streaming!
 
 > **Requirements:**
 > - Windows 10 or Windows 11 (64-bit)
@@ -52,93 +42,47 @@ Most web wrappers and apps simply use a flat, dark grey box. **Apple TV with Liq
 
 ---
 
-## Interactive Web Showcase & Tuner
+## Standalone Liquid Glass Engine
 
-Want to see and customize the liquid glass physics in your browser before running the app?
+This repository also includes the standalone **Liquid Glass Engine** (`liquid-glass.standalone.js` and `liquid-glass.css`), allowing you to add optical liquid glass effects to your own web projects.
 
-Open **[`apple-tv-download.html`](apple-tv-download.html)** in any modern web browser:
-- **Interactive Glass Tuner:** Move sliders in real time to adjust:
-  - **Curve Rounding** (8 px – 42 px)
-  - **Glass Thickness** (10 mm – 60 mm)
-  - **Glass Shine** (Specular highlights)
-  - **Rainbow Glint (RGB)** (Prism chromatic dispersion)
-- **Shape Switcher:** Switch between Square, Circle, and Pill lens geometry.
-- **Draggable Lens:** Move the glass lens freely over high-resolution scenes to watch the real-time refraction in action.
+### Integration
 
----
+Include the stylesheet and script in your HTML:
 
-## How It Works
+```html
+<link rel="stylesheet" href="liquid-glass.css" />
+<script src="liquid-glass.standalone.js"></script>
 
-```
-                                      +-------------------------------+
-                                      |     Apple-TV-LiquidGlass.exe  |
-                                      +---------------+---------------+
-                                                      |
-                                    Launches Isolated Chromium Window
-                                    (Optimized flags, Widevine CDM)
-                                                      |
-                                                      v
-                                        +----------------------------+
-                                        |  Apple TV (tv.apple.com)   |
-                                        |    Full 4K HDR Playback    |
-                                        +--------------+-------------+
-                                                       |
-                              Injects Shader Extension via DevTools Protocol
-                                                       |
-                                                       v
-                                     +----------------------------------+
-                                     |  Liquid Glass Compositing Engine |
-                                     |  - 3D Light Bending              |
-                                     |  - Spectral Rainbow Edges        |
-                                     |  - Border Specular Highlights    |
-                                     +----------------------------------+
+<!-- Add liquid glass to any element with data-liquid-glass -->
+<div data-liquid-glass="panel" style="padding: 24px; border-radius: 24px;">
+  <h2>Liquid Glass Panel</h2>
+  <button data-liquid-glass="button">Action</button>
+</div>
 ```
 
-1. **Lightweight Launcher:** Written in C# utilizing native Windows APIs. It launches a dedicated, sandboxed browser window with hardware acceleration enabled.
-2. **Widevine CDM Protection:** Automatically syncs the required DRM modules from your system Edge installation so 4K video streams without playback errors or quality drops.
-3. **Liquid Glass Injection:** Injects custom shader routines directly into the DOM to render realistic optical depth and reflections on user interface elements.
-
----
-
-## Compiling from Source
-
-You do **not** need Visual Studio or external package managers to compile the binary. You can build it using the built-in Microsoft .NET C# compiler included with Windows:
-
-```powershell
-C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.exe /target:winexe /optimize+ /out:Apple-TV-LiquidGlass.exe "apple-tv-liquid-glass\launcher\AppleTVLiquidGlassLauncher.cs"
-```
-
-The resulting `Apple-TV-LiquidGlass.exe` (~150 KB) is completely standalone and ready to run.
+See **[`LIQUID_GLASS.md`](LIQUID_GLASS.md)** for complete integration instructions, customization options, and API reference.
 
 ---
 
 ## Project Structure
 
 ```
-├── Apple-TV-LiquidGlass.exe      # Compiled Windows standalone executable
-├── apple-tv-download.html         # Interactive web landing page & live optics tuner
-├── apple-tv-liquid-glass.html     # Minimal standalone preview demo
-├── apple-tv-logo.png              # Custom Apple TV Liquid Glass logo
-├── bmc-logo.svg                   # Buy Me A Coffee vector asset
+├── Apple-TV-LiquidGlass.exe      # Windows standalone executable client
+├── apple-tv-logo-orig.png         # Project logo asset
 ├── liquid-glass.css               # Core CSS styling for liquid glass components
-├── liquid-glass.standalone.js     # Standalone optical engine script
-├── LIQUID_GLASS.md                # Reusable Liquid Glass engine integration docs
-├── Example.png                    # Showcase preview 1
-├── Example2.png                   # Showcase preview 2
-├── photomode_04072026_132331.png  # Interactive demo test backdrop
-├── 6zqmp-tvdz7.mp4                # Cinema background loop video
-└── apple-tv-liquid-glass/
-    ├── manifest.json              # Extension manifest configuration
-    ├── liquid-glass.js            # Injected liquid glass shader scripts
-    └── launcher/
-        └── AppleTVLiquidGlassLauncher.cs  # Complete C# launcher source code
+├── liquid-glass.standalone.js     # Standalone optical liquid glass engine
+├── LIQUID_GLASS.md                # Liquid Glass engine documentation & integration guide
+├── LICENSE                        # MIT License
+├── README.md                      # Project documentation
+└── .gitignore                     # Git ignore rules
 ```
 
 ---
 
 ## Support the Creator
 
-If you enjoy streaming your movies and TV shows through Liquid Glass, consider buying me a coffee to support future development and improvements:
+If you enjoy streaming your movies and TV shows through Liquid Glass, consider buying me a coffee to support future development:
 
 <div align="center">
   <a href="https://buymeacoffee.com/ssnmjjg" target="_blank">
