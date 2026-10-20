@@ -13,7 +13,7 @@ A lightweight, portable Apple TV desktop client for Windows 10 & 11 featuring re
 [![App Size](https://img.shields.io/badge/App%20Size-152%20KB%20(Standalone)-30D158?logo=speedtest&logoColor=white)](https://github.com/sddsnmhjjg-ship-it/Apple-TV-with-liquid-glass-for-windows)
 [![Streaming](https://img.shields.io/badge/Streaming-4K%20Ultra%20HD%20%26%20HDR-0071E3?logo=apple-tv&logoColor=white)](https://tv.apple.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-ssnmjjg-FFDD00?logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/ssnmjjg)
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-ssnmhjjg-FFDD00?logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/ssnmhjjg)
 
 </div>
 
@@ -87,8 +87,8 @@ See **[`LIQUID_GLASS.md`](LIQUID_GLASS.md)** for complete integration instructio
 If you enjoy streaming your movies and TV shows through Liquid Glass, consider buying me a coffee to support future development:
 
 <div align="center">
-  <a href="https://buymeacoffee.com/ssnmjjg" target="_blank">
-    <img src="https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=☕&slug=ssnmjjg&button_colour=FFDD00&font_colour=000000&font_family=Lato&outline_colour=000000&coffee_colour=ffffff" alt="Buy Me A Coffee" />
+  <a href="https://buymeacoffee.com/ssnmhjjg" target="_blank">
+    <img src="https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=☕&slug=ssnmhjjg&button_colour=FFDD00&font_colour=000000&font_family=Lato&outline_colour=000000&coffee_colour=ffffff" alt="Buy Me A Coffee" />
   </a>
 </div>
 
