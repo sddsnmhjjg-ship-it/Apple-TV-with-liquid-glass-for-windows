@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="embed-background.png" alt="Apple TV+ for Windows Banner" width="100%" style="border-radius: 14px; margin-bottom: 24px;" />
+
 <img src="apple-tv-logo-orig.png" alt="Apple TV Liquid Glass Logo" width="120" style="border-radius: 26px;" />
 
 # Apple TV with Liquid Glass for Windows
